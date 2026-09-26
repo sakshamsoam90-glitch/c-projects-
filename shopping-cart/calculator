@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    float firstNumber = 0.0f;
+    float secondNumber = 0.0f;
+    char operation;
+
+    printf("Enter the first number:\n");
+    scanf("%f", &firstNumber);
+
+    printf("Enter an operation (+, -, *, /):\n");
+    scanf(" %c", &operation);
+
+    printf("Enter the second number:\n");
+    scanf("%f", &secondNumber);
+
+    if (operation == '+')
+    {
+        printf("Result: %.2f\n", firstNumber + secondNumber);
+    }
+    else if (operation == '-')
+    {
+        printf("Result: %.2f\n", firstNumber - secondNumber);
+    }
+    else if (operation == '*')
+    {
+        printf("Result: %.2f\n", firstNumber * secondNumber);
+    }
+    else if (operation == '/')
+    {
+        if (secondNumber != 0.0f)
+        {
+            printf("Result: %.2f\n", firstNumber / secondNumber);
+        }
+        else
+        {
+            printf("You cannot divide by zero.\n");
+        }
+    }
+    else
+    {
+        printf("That operation is not supported.\n");
+    }
+
+    return 0;
+}
