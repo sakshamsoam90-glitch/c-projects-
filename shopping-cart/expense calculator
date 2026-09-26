@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+	float amount = 0.0f;
+	float total = 0.0f;
+	char category;
+	char description;
+	char another = 'y';
+
+	while (another == 'y')
+	{
+		printf("Enter expense amount: $\n");
+		scanf("%f", &amount);
+
+		printf("Enter one-letter category code (F=food, T=transport):\n");
+		scanf(" %c", &category);
+
+		printf("Enter one-letter description code (L=lunch, B=bus):\n");
+		scanf(" %c", &description);
+
+		total = total + amount;
+
+		printf("\nExpense entered:\n");
+		printf("Amount: $%.2f\n", amount);
+		printf("Category code: %c\n", category);
+		printf("Description code: %c\n", description);
+
+		printf("\nEnter another expense? (y/n):\n");
+		scanf(" %c", &another);
+	}
+
+	printf("\nTotal amount spent: $%.2f\n", total);
+
+	return 0;
+}
